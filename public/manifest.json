@@ -1,0 +1,38 @@
+{
+  "name": "Chrome Extension Framework",
+  "version": "1.0.0",
+  "description": "A clean Vue 3 + TypeScript Chrome extension development framework",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "chrome_url_overrides": {
+    "newtab": "newtab.html"
+  },
+  "permissions": ["storage", "sidePanel", "tabs"],
+  "side_panel": {
+    "default_path": "sidePanel.html"
+  },
+  "host_permissions": [],
+  "web_accessible_resources": [
+    {
+      "resources": ["/images/icon128.png"],
+      "matches": ["<all_urls>"]
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "/images/icon16.png",
+      "32": "/images/icon32.png",
+      "48": "/images/icon48.png",
+      "128": "/images/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "/images/icon16.png",
+    "32": "/images/icon32.png",
+    "48": "/images/icon48.png",
+    "128": "/images/icon128.png"
+  }
+}
